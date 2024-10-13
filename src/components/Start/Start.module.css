@@ -1,0 +1,15 @@
+.container {
+  display: flex;
+  align-items: center;
+}
+.container img {
+  width: 649px;
+}
+
+.title {
+  font-size: 96px;
+}
+button {
+  float: right;
+  margin-top: 20px;
+}
