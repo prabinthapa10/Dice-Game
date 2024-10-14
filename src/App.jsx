@@ -7,6 +7,7 @@ export default function App() {
   const [score, setScore] = useState(0);
   const [selectedNumber, setSelectedNumber] = useState();
   const [currentDice, setCurrentDice] = useState(1);
+  const [error, setError] = useState("");
   return (
     <div>
       <div>
@@ -18,6 +19,8 @@ export default function App() {
             setSelectedNumber={setSelectedNumber}
             currentDice={currentDice}
             setCurrentDice={setCurrentDice}
+            error={error}
+            setError={setError}
           />
         ) : (
           <Start setToggle={setToggle} />

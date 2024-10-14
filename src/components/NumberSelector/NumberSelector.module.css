@@ -45,3 +45,9 @@ span:active {
   display: flex;
   flex-direction: row-reverse;
 }
+.error {
+  position: absolute;
+  top: 50px;
+  right: 150px;
+  color: red;
+}

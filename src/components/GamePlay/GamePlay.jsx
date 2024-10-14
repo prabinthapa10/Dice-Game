@@ -12,7 +12,11 @@ export default function GamePlay({
   setSelectedNumber,
   currentDice,
   setCurrentDice,
+  error,
+  setError,
 }) {
+  // use
+
   return (
     <div>
       <div className={styles.header}>
@@ -24,6 +28,8 @@ export default function GamePlay({
         <NumberSelector
           selectedNumber={selectedNumber}
           setSelectedNumber={setSelectedNumber}
+          error={error}
+          setError={setError}
         />
       </div>
       <div className={styles.content}>
@@ -34,6 +40,8 @@ export default function GamePlay({
           setScore={setScore}
           selectedNumber={selectedNumber}
           setSelectedNumber={setSelectedNumber}
+          error={error}
+          setError={setError}
         />
       </div>
     </div>
