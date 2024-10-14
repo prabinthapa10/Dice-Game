@@ -8,6 +8,7 @@ export default function RollDice({
   score,
   setScore,
   selectedNumber,
+  setSelectedNumber,
 }) {
   function generateRandomNumber(min, max) {
     return Math.floor(Math.random() * (max - min) + min);
@@ -22,6 +23,7 @@ export default function RollDice({
     } else {
       setScore(score - selectedNumber);
     }
+    setSelectedNumber(null);
   }
 
   return (

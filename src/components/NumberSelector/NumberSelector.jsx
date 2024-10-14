@@ -13,6 +13,7 @@ export default function NumberSelector({ selectedNumber, setSelectedNumber }) {
     <div>
       <div className={styles.container}>
         <div className={styles.box}>
+          <div>You have not selected any number</div>
           {array.map((i) => (
             <span
               onClick={() => handleClick(i)}

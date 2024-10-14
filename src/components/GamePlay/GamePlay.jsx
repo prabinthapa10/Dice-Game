@@ -33,6 +33,7 @@ export default function GamePlay({
           score={score}
           setScore={setScore}
           selectedNumber={selectedNumber}
+          setSelectedNumber={setSelectedNumber}
         />
       </div>
     </div>
