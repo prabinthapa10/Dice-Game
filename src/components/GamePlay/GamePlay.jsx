@@ -24,6 +24,9 @@ export default function GamePlay({
           setSelectedNumber={setSelectedNumber}
         />
       </div>
+      <div className={styles.content}>
+        <RollDice />
+      </div>
     </div>
   );
 }
