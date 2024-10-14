@@ -1,14 +1,11 @@
 import React from "react";
 import styles from "./Button.module.css";
 
-export default function Button({ text, isBlackBg, setToggle }) {
-  function handleButton() {
-    setToggle(true);
-  }
+export default function Button({ text, isBlackBg, onClick }) {
   return (
     <div>
       <button
-        onClick={handleButton}
+        onClick={onClick}
         className={isBlackBg ? styles.blackBg : styles.whiteBg}
       >
         {text}

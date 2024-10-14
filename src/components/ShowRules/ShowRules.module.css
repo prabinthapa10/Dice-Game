@@ -1,0 +1,13 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  background-color: rgb(198, 173, 173);
+  padding: 50px;
+}
+.container li {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}

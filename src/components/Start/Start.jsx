@@ -3,6 +3,9 @@ import styles from "./Start.module.css";
 import Button from "../Button/Button";
 
 export default function Start({ setToggle }) {
+  function handleClick() {
+    setToggle(true);
+  }
   return (
     <div>
       <div className={styles.container}>
@@ -12,8 +15,8 @@ export default function Start({ setToggle }) {
           <Button
             className={styles.button}
             text="Play Now"
-            setToggle={setToggle}
             isBlackBg={true}
+            onClick={handleClick}
           />
         </div>
       </div>

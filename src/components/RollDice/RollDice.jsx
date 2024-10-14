@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styles from "./RollDice.module.css";
 import Button from "../Button/Button.jsx";
+import ShowRules from "../ShowRules/ShowRules.jsx";
 
 export default function RollDice({
   currentDice,
@@ -12,6 +13,8 @@ export default function RollDice({
   error,
   setError,
 }) {
+  const [showRule, setShowRule] = useState(false);
+
   function generateRandomNumber(min, max) {
     return Math.floor(Math.random() * (max - min) + min);
   }
@@ -32,6 +35,14 @@ export default function RollDice({
       setScore(score - selectedNumber);
     }
     setSelectedNumber(null);
+
+    // reset function
+  }
+  function reset() {
+    setScore(0);
+  }
+  function showRules() {
+    setShowRule(!showRule);
   }
 
   return (
@@ -43,8 +54,9 @@ export default function RollDice({
           alt="dice"
         />
         <p>Click on Dice to roll {currentDice}</p>
-        <Button text="Reset Score" />
-        <Button text="Show Rules" isBlackBg={true} />
+        <Button text="Reset Score" onClick={reset} />
+        <Button text="Show Rules" isBlackBg={true} onClick={showRules} />
+        {showRule ? <ShowRules /> : ""}
       </div>
     </div>
   );
