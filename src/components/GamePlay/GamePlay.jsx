@@ -10,6 +10,8 @@ export default function GamePlay({
   score,
   selectedNumber,
   setSelectedNumber,
+  currentDice,
+  setCurrentDice,
 }) {
   return (
     <div>
@@ -25,7 +27,13 @@ export default function GamePlay({
         />
       </div>
       <div className={styles.content}>
-        <RollDice />
+        <RollDice
+          currentDice={currentDice}
+          setCurrentDice={setCurrentDice}
+          score={score}
+          setScore={setScore}
+          selectedNumber={selectedNumber}
+        />
       </div>
     </div>
   );

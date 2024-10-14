@@ -2,8 +2,13 @@ import React, { useState } from "react";
 import styles from "./RollDice.module.css";
 import Button from "../Button/Button.jsx";
 
-export default function RollDice() {
-  const [currentDice, setCurrentDice] = useState(1);
+export default function RollDice({
+  currentDice,
+  setCurrentDice,
+  score,
+  setScore,
+  selectedNumber,
+}) {
   function generateRandomNumber(min, max) {
     return Math.floor(Math.random() * (max - min) + min);
   }
@@ -11,6 +16,12 @@ export default function RollDice() {
   function rollDice() {
     const randomNumber = generateRandomNumber(1, 7);
     setCurrentDice(randomNumber);
+
+    if (randomNumber == selectedNumber) {
+      setScore(score + selectedNumber);
+    } else {
+      setScore(score - selectedNumber);
+    }
   }
 
   return (
