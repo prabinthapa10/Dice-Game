@@ -1,0 +1,47 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.box {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 25px;
+}
+span {
+  border: 2px solid rgb(0, 0, 0);
+  width: 72px;
+  height: 72px;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+}
+span:hover {
+  transition: 0.3s ease-in;
+  background: rgb(0, 0, 0);
+  color: white;
+}
+span:active {
+  background: rgb(0, 0, 0);
+  color: white;
+}
+
+.number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.selectedNumber {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  color: white;
+}
+.text {
+  font-size: 20px;
+  font-weight: bold;
+  display: flex;
+  flex-direction: row-reverse;
+}

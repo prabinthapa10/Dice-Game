@@ -9,7 +9,6 @@
 .title {
   font-size: 96px;
 }
-button {
-  float: right;
+.button {
   margin-top: 20px;
 }

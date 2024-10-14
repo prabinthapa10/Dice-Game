@@ -9,7 +9,12 @@ export default function Start({ setToggle }) {
         <img src="/images/dices.png" alt="" />
         <div>
           <h1 className={styles.title}>Dice Game</h1>
-          <Button text="Play Now" setToggle={setToggle} isBlackBg={true} />
+          <Button
+            className={styles.button}
+            text="Play Now"
+            setToggle={setToggle}
+            isBlackBg={true}
+          />
         </div>
       </div>
     </div>
