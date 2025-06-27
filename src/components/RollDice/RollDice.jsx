@@ -19,6 +19,8 @@ export default function RollDice({
     return Math.floor(Math.random() * (max - min) + min);
   }
 
+  // This is a test 1
+
   function rollDice() {
     // will return nothing is number is not selected
     if (!selectedNumber) {
